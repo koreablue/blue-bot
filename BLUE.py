@@ -1,4 +1,5 @@
 import asyncio
+import os
 
 import discord
 from discord.ext import commands
@@ -9,6 +10,7 @@ import time
 app = commands.Bot(command_prefix='/')
 app.remove_command("help")
 
+access_token = os.environ["BOT_TOKEN"]
 tokn = 'NzM0Njc4NTI1NDYxOTIxODM1.XxVMvw.nq7CeMwXxFxqvN1EcIjS5a_t79E'
 
 @app.event
@@ -172,4 +174,6 @@ async def on_message(message):
                             break
                 except asyncio.TimeoutError:  # Handles Timeout
                     break
-app.run(tokn)
+                    
+access_token = os.environ["BOT_TOKEN"]
+app.run(access_token)
