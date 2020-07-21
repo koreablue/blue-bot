@@ -10,7 +10,6 @@ import time
 app = commands.Bot(command_prefix='/')
 app.remove_command("help")
 
-access_token = os.environ["BOT_TOKEN"]
 tokn = 'NzM0Njc4NTI1NDYxOTIxODM1.XxVMvw.nq7CeMwXxFxqvN1EcIjS5a_t79E'
 
 @app.event
@@ -176,4 +175,4 @@ async def on_message(message):
                     break
                     
 access_token = os.environ["BOT_TOKEN"]
-app.run(access_token)
+client.run(access_token)
